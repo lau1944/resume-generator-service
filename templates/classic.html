@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html>
+  <meta name="viewport" content="700, initial-scale=1" />
+  <style>
+    body {
+      margin: 5vh;
+    }
+
+    h1 {
+      text-transform: uppercase;
+      margin: 0;
+      font-size: 33px;
+      font-family: poppins;
+    }
+
+    h2 {
+      text-transform: uppercase;
+      font-family: poppins;
+      font-weight: 500;
+    }
+
+    h3 {
+      text-transform: uppercase;
+      font-family: poppins;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .title {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .school-item {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 10px;
+    }
+
+    #school-location {
+      font-size: 13px;
+      font-weight: 200;
+    }
+
+    #school-time {
+      font-size: 13px;
+      font-weight: 200;
+    }
+
+    .role {
+      font-size: 13px;
+      font-weight: 200;
+      margin-top: 10px;
+      font-family: poppins;
+    }
+
+    .header-layer {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    #avatar {
+      border-radius: 50%;
+      height: 100px;
+      width: 100px;
+      margin-top: 10px;
+      margin-right: 10px;
+      object-fit: cover;
+    }
+
+    hr.solid {
+      margin-top: 25px;
+      margin-bottom: 25px;
+      border-top: 1px solid gainsboro;
+      opacity: 0.5;
+    }
+
+    .title-divide {
+      height: 2px;
+      margin: 6px 0 6px 0;
+      background-color: black;
+      opacity: 0.6;
+      width: 50px;
+      align-items: flex-start;
+    }
+
+    #info {
+      display: flex;
+      flex-direction: row;
+      justify-content: start;
+      align-items: flex-start;
+    }
+
+    .lang-item {
+      margin-bottom: 12px;
+    }
+
+    .info-divide {
+      border-top: 1px solid gainsboro;
+      opacity: 0.5;
+      margin-right: 5vh;
+    }
+
+    #short {
+      min-width: 200px;
+    }
+
+    #description {
+      display: flex;
+      flex-direction: row;
+    }
+
+    ul {
+      list-style: none;
+      list-style-position: inside;
+      padding-left: 0;
+    }
+
+    .profile-item {
+      list-style-position: inside;
+      margin-top: 15px;
+    }
+
+    .profile-txt {
+      font-size: 14px;
+      font-weight: 150;
+    }
+
+    .link-txt {
+      font-size: 14px;
+      font-weight: 150;
+      color: black;
+      text-decoration: underline;
+    }
+
+    #links {
+      margin-top: 45px;
+    }
+
+    .school {
+      margin-top: 15px;
+    }
+
+    .bar-5 {
+      width: 100%;
+      height: 10px;
+      background-color: black;
+    }
+
+    .bar-4 {
+      width: 80%;
+      height: 10px;
+      background-color: black;
+    }
+
+    .bar-3 {
+      width: 60%;
+      height: 10px;
+      background-color: black;
+    }
+
+    .bar-2 {
+      width: 40%;
+      height: 10px;
+      background-color: black;
+    }
+
+    .bar-1 {
+      width: 20%;
+      height: 10px;
+      background-color: black;
+    }
+
+    .bar-container {
+      width: 90%;
+      background-color: #f1f1f1;
+      text-align: center;
+      color: white;
+    }
+
+    #skills {
+      margin-top: 45px;
+    }
+
+    .skill-item {
+      margin-top: 15px;
+    }
+
+    #skill-name {
+      margin-bottom: 7px;
+      font-size: 14px;
+    }
+
+    #lang-name {
+      margin-bottom: 7px;
+      font-size: 14px;
+    }
+
+    #experience {
+      margin-top: 45px;
+    }
+
+    #company-name {
+      font-size: 20px;
+      font-weight: 400;
+    }
+
+    #company-location {
+      font-size: 13px;
+      font-weight: 200;
+    }
+
+    #company-time {
+      font-size: 13px;
+      font-weight: 200;
+    }
+
+    .work-item {
+      font-size: 13px;
+      font-weight: 200;
+      font-family: poppins;
+      margin-top: 12px;
+    }
+
+    #work {
+      list-style-type: square;
+      list-style-position: outside;
+      padding-left: 15px;
+      font-size: 13px;
+      font-weight: 200;
+      font-family: poppins;
+      margin-top: 12px;
+    }
+
+    #language {
+      margin-top: 45px;
+    }
+
+    #project-title {
+      font-weight: 600;
+      font-size: 16px;
+      margin-top: 15px;
+    }
+
+    #project-item {
+      margin-top: 25px;
+    }
+
+    #project-content {
+      font-size: 12px;
+      font-family: poppins;
+      font-weight: 200;
+      margin-top: 10px;
+    }
+
+    #project-link {
+      text-decoration: underline;
+      font-size: 12px;
+      font-family: poppins;
+      font-weight: 200;
+      margin-left: 15px;
+      margin-top: 15px;
+      margin-right: 15px;
+      color: black;
+    }
+  </style>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  />
+  <link href="classic-style.css" rel="stylesheet" type="text/css" />
+  <header>
+    <div class="header-layer">
+      <div>
+        <!-- first name -->
+        <h1 id="first-name"></h1>
+        <!-- last name -->
+        <h1 id="last-name"></h1>
+
+        <!-- role -->
+        <div id="role" class="role"></div>
+      </div>
+
+      <!-- avatar source -->
+      <img
+        id="avatar"
+        src="https://cdn-icons-png.flaticon.com/128/2202/2202112.png"
+        alt="Avatar"
+      />
+    </div>
+
+    <hr class="solid" />
+  </header>
+
+  <body>
+    <div id="info">
+      <div id="short">
+        <div id="profile">
+          <h2>DETAILS</h2>
+          <div class="title-divide"></div>
+
+          <ul id="profile-list">
+            <!--
+            <li class="profile-item">
+              <div>COUNTRY</div>
+              <div id="country" class="profile-txt">China</div>
+            </li>
+            <li class="profile-item">
+              <div>PHONE</div>
+              <div id="phone" class="profile-txt">9179884654</div>
+            </li>
+            <li class="profile-item">
+              <div>EMAIL</div>
+              <div id="email" class="profile-txt">tt@gmail.com</div>
+            </li>
+          --></ul>
+        </div>
+
+        <div id="links">
+          <!--
+            <h2>LINKS</h2>
+            <div class="title-divide"></div>
+  
+            <ul id="link-list">
+              
+              <li class="profile-item">
+                <a class="link-txt" href="http://baidu.com">Linkedin</a>
+              </li>
+              <li class="profile-item">
+                <a class="link-txt" href="http://baidu.com">Github</a>
+              </li>
+              <li class="profile-item">
+                <a class="link-txt" href="http://baidu.com">Portfolio</a>
+              </li>
+            </ul>
+             -->
+        </div>
+
+        <div id="skills">
+          <!--
+            <h2>SKILLS</h2>
+            <div class="title-divide"></div>
+  
+            <ul id="skill-list">
+              <li class="skill-item">
+                <div id="skill-name">Java</div>
+                <div id="bar">
+                  <div class="bar-container">
+                    <div class="bar-5"></div>
+                  </div>
+                </div>
+              </li>
+  
+              <li class="skill-item">
+                <div id="skill-name">Kotlin</div>
+                <div id="bar">
+                  <div class="bar-container">
+                    <div class="bar-4"></div>
+                  </div>
+                </div>
+              </li>
+  
+              <li class="skill-item">
+                <div id="skill-name">Javascript</div>
+                <div id="bar">
+                  <div class="bar-container">
+                    <div class="bar-3"></div>
+                  </div>
+                </div>
+              </li>
+  
+              <li class="skill-item">
+                <div id="skill-name">Golang</div>
+                <div id="bar">
+                  <div class="bar-container">
+                    <div class="bar-2"></div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+             -->
+        </div>
+
+        <div id="language">
+          <!--
+            <h2>LANGUAGES</h2>
+            <div class="title-divide"></div>
+  
+            <ul id="lang-list">
+              <li class="lang-item">
+                <div id="lang-name">Chinese</div>
+                <div id="bar">
+                  <div class="bar-container">
+                    <div class="bar-5"></div>
+                  </div>
+                </div>
+              </li>
+              <li class="lang-item">
+                <div id="lang-name">English</div>
+                <div id="bar">
+                  <div class="bar-container">
+                    <div class="bar-4"></div>
+                  </div>
+                </div>
+              </li>
+              <li class="lang-item">
+                <div id="lang-name">Cantonese</div>
+                <div id="bar">
+                  <div class="bar-container">
+                    <div class="bar-5"></div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+             -->
+        </div>
+      </div>
+
+      <div id="description">
+        <hr class="info-divide" />
+        <div id="des-list">
+          <div id="intro">
+            <h2>Introduction</h2>
+            <div class="title-divide"></div>
+
+            <div id="introduction" class="profile-txt"></div>
+          </div>
+
+          <hr class="solid" />
+
+          <!--
+          <div id="education">
+            <h2>Education</h2>
+            <div class="title-divide"></div>
+
+            <ul id="school-list" class="school">
+              <li class="school-item">
+                <div>
+                  <h3 id="university">NEW YORK UNIVERSITY</h3>
+                  <div id="school-time">Sep 2021 - Jun 2023</div>
+                </div>
+                <div>
+                  <div id="school-location">New York</div>
+                </div>
+              </li>
+
+              <li class="school-item">
+                <div>
+                  <h3 id="university">MING CHUAN UNIVERSITY</h3>
+                  <div id="school-time">Sep 2016 - Jun 2020</div>
+                </div>
+                <div>
+                  <div id="school-location">Taipei</div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <hr class="solid" />
+          -->
+
+          <!--
+          <div id="experience">
+            <h2>Work Experience</h2>
+            <div class="title-divide"></div>
+
+            <ul id="work-list">
+              <li>
+                <div class="title">
+                  <div id="company-name">Duo Yi Network</div>
+                  <div>
+                    <div id="company-location">Guangzhou</div>
+                    <div id="company-time">Jul 2020 — Jul 2021</div>
+                  </div>
+                </div>
+
+                <div id="work">
+                  . Maintaining company internal work android app similar to
+                  slack, building new features with flutter and android. <br />
+
+                  . Build common android modules and flutter library, like
+                  in-app update, authentication, in-app message, modules are
+                  tested and integrated by multiple, hight traffic application
+                  developed by company.
+                </div>
+              </li>
+            </ul>
+
+            <hr class="solid" />
+          </div>
+        -->
+
+          <!--
+          <div id="project">
+            <h2>Projects</h2>
+            <div class="title-divide"></div>
+
+            <ul id="project-list">
+              <li id="project-item">
+                <div class="header-layer">
+                  <div id="project-title">App hunt -1M+ downloads</div>
+                  <a
+                    id="project-link"
+                    href="https://play.google.com/store/apps/details?id=com.vau.apphunt.studiotech"
+                    >Project link</a
+                  >
+                </div>
+
+                <div id="project-content">
+                  A google play application explore tool with an iOS style UI
+                  interface. tech stack - android, firebase, nodejs, google
+                  cloud. . Develop native android app for users to search apps
+                  and games, users can post their recommendation. . Write REST
+                  API for accessing store data, post users' content to database,
+                  push notifications. . Deploy service as docker container to
+                  Google Cloud cloud run platform. CircleCI to automate building
+                  process and deployment.
+                </div>
+              </li>
+
+              <li id="project-item">
+                <div class="header-layer">
+                  <div id="project-title">Season</div>
+                  <a id="project-link" href="https://seasonnatural.netlify.app/"
+                    >Project link</a
+                  >
+                </div>
+
+                <div id="project-content">
+                  Listen to white noise, nature sound. Mood tracker. . Develop
+                  Flutter application (cross platform), users can search
+                  collections of white noise, listen to the sound in background.
+                  . Writing REST API on Express, queries white noise data from
+                  mongodb. tech stack: flutter, nodejs, mongodb, redis.
+                </div>
+              </li>
+
+              <li id="project-item">
+                <div class="header-layer">
+                  <div id="project-title">Flow VPN</div>
+                  <a id="project-link" href="https://flow-china-vpn.vercel.app/"
+                    >Project link</a
+                  >
+                </div>
+
+                <div id="project-content">
+                  VPN app for connecting Chinese social network from abroad .
+                  Develop front end on Flutter (Mobile app) and React (Landing
+                  page), use OpenVpn client for connecting to remote VPN server.
+                  . Use Spring boot to interact with mysql server, redis, get
+                  user and server data from database, implement consistent
+                  hashing algorithm to handle load balance, design method to
+                  encrypt server info and send to client. . Manage OpenVpn
+                  server on Linux CentOS, hosted on Alibaba cloud, writing SHELL
+                  to automate process to manage vpn users. tech stack: flutter,
+                  springboot, nodejs, mongodb, mysql, rabbitmq, redis, openvpn.
+                </div>
+              </li>
+            </ul>
+          </div>
+          -->
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

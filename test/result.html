@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html>
+  <meta name="viewport" content="700, initial-scale=1" >
+  <style>
+    body {
+      margin: 5vh;
+    }
+
+    h1 {
+      text-transform: uppercase;
+      margin: 0;
+      font-size: 33px;
+      font-family: poppins;
+    }
+
+    h2 {
+      text-transform: uppercase;
+      font-family: poppins;
+      font-weight: 500;
+    }
+
+    h3 {
+      text-transform: uppercase;
+      font-family: poppins;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .title {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .school-item {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 10px;
+    }
+
+    #school-location {
+      font-size: 13px;
+      font-weight: 200;
+    }
+
+    #school-time {
+      font-size: 13px;
+      font-weight: 200;
+    }
+
+    .role {
+      font-size: 13px;
+      font-weight: 200;
+      margin-top: 10px;
+      font-family: poppins;
+    }
+
+    .header-layer {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    #avatar {
+      border-radius: 50%;
+      height: 100px;
+      width: 100px;
+      margin-top: 10px;
+      margin-right: 10px;
+      object-fit: cover;
+    }
+
+    hr.solid {
+      margin-top: 25px;
+      margin-bottom: 25px;
+      border-top: 1px solid gainsboro;
+      opacity: 0.5;
+    }
+
+    .title-divide {
+      height: 2px;
+      margin: 6px 0 6px 0;
+      background-color: black;
+      opacity: 0.6;
+      width: 50px;
+      align-items: flex-start;
+    }
+
+    #info {
+      display: flex;
+      flex-direction: row;
+      justify-content: start;
+      align-items: flex-start;
+    }
+
+    .lang-item {
+      margin-bottom: 12px;
+    }
+
+    .info-divide {
+      border-top: 1px solid gainsboro;
+      opacity: 0.5;
+      margin-right: 5vh;
+    }
+
+    #short {
+      min-width: 200px;
+    }
+
+    #description {
+      display: flex;
+      flex-direction: row;
+    }
+
+    ul {
+      list-style: none;
+      list-style-position: inside;
+      padding-left: 0;
+    }
+
+    .profile-item {
+      list-style-position: inside;
+      margin-top: 15px;
+    }
+
+    .profile-txt {
+      font-size: 14px;
+      font-weight: 150;
+    }
+
+    .link-txt {
+      font-size: 14px;
+      font-weight: 150;
+      color: black;
+      text-decoration: underline;
+    }
+
+    #links {
+      margin-top: 45px;
+    }
+
+    .school {
+      margin-top: 15px;
+    }
+
+    .bar-5 {
+      width: 100%;
+      height: 10px;
+      background-color: black;
+    }
+
+    .bar-4 {
+      width: 80%;
+      height: 10px;
+      background-color: black;
+    }
+
+    .bar-3 {
+      width: 60%;
+      height: 10px;
+      background-color: black;
+    }
+
+    .bar-2 {
+      width: 40%;
+      height: 10px;
+      background-color: black;
+    }
+
+    .bar-1 {
+      width: 20%;
+      height: 10px;
+      background-color: black;
+    }
+
+    .bar-container {
+      width: 90%;
+      background-color: #f1f1f1;
+      text-align: center;
+      color: white;
+    }
+
+    #skills {
+      margin-top: 45px;
+    }
+
+    .skill-item {
+      margin-top: 15px;
+    }
+
+    #skill-name {
+      margin-bottom: 7px;
+      font-size: 14px;
+    }
+
+    #lang-name {
+      margin-bottom: 7px;
+      font-size: 14px;
+    }
+
+    #experience {
+      margin-top: 45px;
+    }
+
+    #company-name {
+      font-size: 20px;
+      font-weight: 400;
+    }
+
+    #company-location {
+      font-size: 13px;
+      font-weight: 200;
+    }
+
+    #company-time {
+      font-size: 13px;
+      font-weight: 200;
+    }
+
+    .work-item {
+      font-size: 13px;
+      font-weight: 200;
+      font-family: poppins;
+      margin-top: 12px;
+    }
+
+    #work {
+      list-style-type: square;
+      list-style-position: outside;
+      padding-left: 15px;
+      font-size: 13px;
+      font-weight: 200;
+      font-family: poppins;
+      margin-top: 12px;
+    }
+
+    #language {
+      margin-top: 45px;
+    }
+
+    #project-title {
+      font-weight: 600;
+      font-size: 16px;
+      margin-top: 15px;
+    }
+
+    #project-item {
+      margin-top: 25px;
+    }
+
+    #project-content {
+      font-size: 12px;
+      font-family: poppins;
+      font-weight: 200;
+      margin-top: 10px;
+    }
+
+    #project-link {
+      text-decoration: underline;
+      font-size: 12px;
+      font-family: poppins;
+      font-weight: 200;
+      margin-left: 15px;
+      margin-top: 15px;
+      margin-right: 15px;
+      color: black;
+    }
+  </style>
+  <link     rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+  >
+  <link href="classic-style.css" rel="stylesheet" type="text/css" >
+  <header>
+    <div class="header-layer">
+      <div>
+        
+        <h1 id="first-name">John</h1>
+        
+        <h1 id="last-name">Lennon</h1>
+
+        
+        <div id="role" class="role">Software engineer</div>
+      </div>
+
+      
+      <img id="avatar" src="https://miro.medium.com/max/720/1*v7eYkDuAVKSilUzhHQ4lLA.webp" alt="Avatar">
+    </div>
+
+    <hr class="solid" >
+  </header>
+
+  <body>
+    <div id="info">
+      <div id="short">
+        <div id="profile">
+          <h2>DETAILS</h2>
+          <div class="title-divide"></div>
+
+          <ul id="profile-list">
+            
+  <li class="profile-item">
+    <div>EMAIL</div>
+    <div id="country" class="profile-txt">tt@gmail.com</div>
+  </li>
+  <li class="profile-item">
+    <div>COUNTRY</div>
+    <div id="country" class="profile-txt">China</div>
+  </li></ul>
+        </div>
+
+        <div id="links">
+          
+        
+    <h2>LINKS</h2>
+    <div class="title-divide"></div>
+    <ul id="link-list">
+    <li class="profile-item">
+      <a class="link-txt" href="http://blank.com">Github</a>
+    </li>
+  
+    <li class="profile-item">
+      <a class="link-txt" href="http://blank.com">Linkedin</a>
+    </li>
+  
+    <li class="profile-item">
+      <a class="link-txt" href="http://blank.com">Personal site</a>
+    </li>
+  </ul>
+  </div>
+
+        <div id="skills">
+          
+        
+    <h2>SKILLS</h2>
+    <div class="title-divide"></div>
+    <ul id="skill-list">
+      <li class="skill-item">
+      <div id="skill-name">Java</div>
+      <div id="bar">
+        <div class="bar-container">
+          <div class="bar-5"></div>
+        </div>
+      </div>
+    </li>
+  
+      <li class="skill-item">
+      <div id="skill-name">Kotlin</div>
+      <div id="bar">
+        <div class="bar-container">
+          <div class="bar-4"></div>
+        </div>
+      </div>
+    </li>
+  
+      <li class="skill-item">
+      <div id="skill-name">Golang</div>
+      <div id="bar">
+        <div class="bar-container">
+          <div class="bar-2"></div>
+        </div>
+      </div>
+    </li>
+  
+      <li class="skill-item">
+      <div id="skill-name">Javascript</div>
+      <div id="bar">
+        <div class="bar-container">
+          <div class="bar-5"></div>
+        </div>
+      </div>
+    </li>
+  </ul>
+  </div>
+
+        <div id="language">
+          
+        
+    <h2>LANGUAGES</h2>
+    <div class="title-divide"></div>
+    <ul id="lang-list">
+      <li class="lang-item">
+      <div id="lang-name">Chinese</div>
+      <div id="bar">
+        <div class="bar-container">
+          <div class="bar-4"></div>
+        </div>
+      </div>
+    </li>
+  
+      <li class="lang-item">
+      <div id="lang-name">English</div>
+      <div id="bar">
+        <div class="bar-container">
+          <div class="bar-5"></div>
+        </div>
+      </div>
+    </li>
+  
+      <li class="lang-item">
+      <div id="lang-name">Spanish</div>
+      <div id="bar">
+        <div class="bar-container">
+          <div class="bar-2"></div>
+        </div>
+      </div>
+    </li>
+  </ul>
+  </div>
+      </div>
+
+      <div id="description">
+        <hr class="info-divide" >
+        <div id="des-list">
+          <div id="intro">
+            <h2>Introduction</h2>
+            <div class="title-divide"></div>
+
+            <div id="introduction" class="profile-txt">Enthusiastic software engineer, love implementing computersoftware.Always eager to learn new technologies, a fast learner.Always has passion to find out how things work under the hood.With the mobile development background, want to explore new areaon backend development, looking forward to new challenges.An opensource contributor, has experience on contributing open sourceproject.</div>
+          </div>
+
+          <hr class="solid" >
+
+          
+
+          
+
+          
+        
+    <div id="education">
+      <h2>Education</h2>
+      <div class="title-divide"></div>
+
+      <ul id="school-list" class="school">
+      
+    <li class="school-item">
+      <div>
+        <h3 id="university">Ming Chuan University</h3>
+        <div id="school-time">2020 Sep 9 - 2023 Jun 1</div>
+      </div>
+      <div>
+        <div id="school-location">Taipei</div>
+      </div>
+    </li>
+  
+    <li class="school-item">
+      <div>
+        <h3 id="university">New York University</h3>
+        <div id="school-time">2020 Sep 9 - 2023 Jun 1</div>
+      </div>
+      <div>
+        <div id="school-location">New York</div>
+      </div>
+    </li>
+  </ul>
+    </div>
+    <hr class="solid" >
+  
+  <div id="experience">
+    <h2>Work Experience</h2>
+    <div class="title-divide"></div>
+
+    <ul id="work-list">
+    <li>
+      <div class="title">
+        <div id="company-name">Duo Yi network</div>
+        <div>
+          <div id="company-location">Guangzhou</div>
+          <div id="company-time">2020 Sep - 2022 Jun</div>
+        </div>
+      </div>
+
+      <div id="work">
+        Do some jobs
+      </div>
+    </li>
+  </ul>
+
+    <hr class="solid" >
+  </div>
+  
+    <div id="project">
+      <h2>Projects</h2>
+      <div class="title-divide"></div>
+
+      <ul id="project-list">
+    <li id="project-item">
+      <div class="header-layer">
+        <div id="project-title">App hunt</div>
+        <a           id="project-link"
+          href="https://blank.com"
+          >Project link</a>
+      </div>
+
+      <div id="project-content">sdsdaodqwojfaojfokpdsjkpfnsepkfnpkwenfpkwempfkneplfmnpfw</div>
+    </li>
+  
+    <li id="project-item">
+      <div class="header-layer">
+        <div id="project-title">Techcrunch</div>
+        <a           id="project-link"
+          href="https://blank.com"
+          >Project link</a>
+      </div>
+
+      <div id="project-content">sdsdaodqwojfaojfokpdsjkpfnsepkfnpkwenfpkwempfkneplfmnpfw</div>
+    </li>
+  </ul>
+    </div>
+  </div>
+      </div>
+    </div>
+  </body>
+</html>

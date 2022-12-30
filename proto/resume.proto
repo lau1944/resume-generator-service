@@ -1,0 +1,67 @@
+syntax = "proto3";
+
+message ResumeDetail {
+    message Lang {
+        string name = 1;
+        string level = 2;
+    }
+    
+    message Skill {
+        string name = 1;
+        string level = 2;
+    }
+    
+    message Link {
+        string type = 1;
+        string link = 2;
+    }
+    
+    message Profile {
+        string firstName = 1;
+        string lastName = 2;
+        string role = 3;
+        optional string avatar = 4;
+        string email = 5;
+        optional string country = 6;
+        optional string phoneNumber = 7;
+    }
+    
+    message Eduation {
+        string name = 1;
+        string time = 2;
+        string location = 3;
+    }
+
+    message Work {
+        string name = 1;
+        string location = 2;
+        string time = 3;
+        string description = 4;
+    }
+
+    message Project {
+        string title = 1;
+        string link = 2;
+        string content = 3;
+    }
+
+    Profile profile = 1;
+    repeated Link links = 2;
+    repeated Skill skills = 3;
+    repeated Lang langs = 4;
+    repeated Eduation educations = 5;
+    repeated Work works = 6;
+    repeated Project projects = 7;
+    string introduction = 8;
+    string resumeId = 9;
+}
+
+message ResumeResponse {
+    int32 code = 1;
+    string status = 2;
+    string body = 3;
+}
+
+service ResumeService {
+    rpc bindAll(ResumeDetail) returns (ResumeResponse) {};
+}
