@@ -134,7 +134,7 @@ describe('RPC setup', () => {
           title: 'Techcrunch',
           link: 'https://blank.com',
           content: 'sdsdaodqwojfaojfokpdsjkpfnsepkfnpkwenfpkwempfkneplfmnpfw'
-        },
+        }
       ],
       introduction: 'Enthusiastic software engineer, love implementing computersoftware.Always eager to learn new technologies, a fast learner.Always has passion to find out how things work under the hood.With the mobile development background, want to explore new areaon backend development, looking forward to new challenges.An opensource contributor, has experience on contributing open sourceproject.',
       resumeId: 'classic'
