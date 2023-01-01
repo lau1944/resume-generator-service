@@ -29,5 +29,5 @@ const packageDefinition = protoLoader.loadSync(path.join(PROTO_PATH, 'resume.pro
 const resumeProto = grpc.loadPackageDefinition(packageDefinition)
 
 app.addService(resumeProto.ResumeService.service, {
-  bind: resumeHandler
+  bindAll: resumeHandler
 })
