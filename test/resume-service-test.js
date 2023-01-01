@@ -152,7 +152,6 @@ describe('RPC setup', () => {
           throw err
         }
       })
-      // expect('hello world').equal(res.body)
     })
   })
 })

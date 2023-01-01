@@ -1,50 +1,6 @@
 syntax = "proto3";
 
 message ResumeDetail {
-    message Lang {
-        string name = 1;
-        string level = 2;
-    }
-    
-    message Skill {
-        string name = 1;
-        string level = 2;
-    }
-    
-    message Link {
-        string type = 1;
-        string link = 2;
-    }
-    
-    message Profile {
-        string firstName = 1;
-        string lastName = 2;
-        string role = 3;
-        optional string avatar = 4;
-        string email = 5;
-        optional string country = 6;
-        optional string phoneNumber = 7;
-    }
-    
-    message Eduation {
-        string name = 1;
-        string time = 2;
-        string location = 3;
-    }
-
-    message Work {
-        string name = 1;
-        string location = 2;
-        string time = 3;
-        string description = 4;
-    }
-
-    message Project {
-        string title = 1;
-        string link = 2;
-        string content = 3;
-    }
-
     Profile profile = 1;
     repeated Link links = 2;
     repeated Skill skills = 3;
@@ -56,12 +12,91 @@ message ResumeDetail {
     string resumeId = 9;
 }
 
+message Lang {
+    string name = 1;
+    string level = 2;
+}
+
+message Skill {
+    string name = 1;
+    string level = 2;
+}
+
+message Link {
+    string type = 1;
+    string link = 2;
+}
+
+message Profile {
+    string firstName = 1;
+    string lastName = 2;
+    string role = 3;
+    optional string avatar = 4;
+    string email = 5;
+    optional string country = 6;
+    optional string phoneNumber = 7;
+}
+
+message Eduation {
+    string name = 1;
+    string time = 2;
+    string location = 3;
+}
+
+message Work {
+    string name = 1;
+    string location = 2;
+    string time = 3;
+    string description = 4;
+}
+
+message Project {
+    string title = 1;
+    string link = 2;
+    string content = 3;
+}
+
 message ResumeResponse {
     int32 code = 1;
     string status = 2;
     string body = 3;
 }
 
+message LinkRequest {
+    repeated Link links = 1;
+}
+
+message SkillRequest {
+    repeated Skill skills = 1;
+}
+
+message LangRequest {
+    repeated Lang langs = 1;
+}
+
+message IntroRequest {
+    string intro = 1;
+}
+
+message EducationRequest {
+    repeated Eduation edus = 1;
+}
+
+message WorkRequest {
+    repeated Work works = 1;
+}
+
+message ProjectRequest {
+    repeated Project projects = 1;
+}
+
 service ResumeService {
     rpc bindAll(ResumeDetail) returns (ResumeResponse) {};
+    // rpc bindProfile(Profile) returns (ResumeResponse) {};
+    // rpc bindLinks(LinkRequest) returns (ResumeResponse) {};
+    // rpc bindSkills(LangRequest) returns (ResumeResponse) {};
+    // rpc bindIntro(IntroRequest) returns (ResumeResponse) {};
+    // rpc bindEducation(EducationRequest) returns (ResumeResponse) {};
+    // rpc bindWorks(WorkRequest) returns (ResumeResponse) {};
+    // rpc bindProfiles(ProjectRequest) returns (ResumeResponse) {};
 }
