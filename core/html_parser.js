@@ -102,7 +102,7 @@ const parseProfileItem = (type, content) => {
   return HTMLParser.parse(`
   <li class="profile-item">
     <div>${type}</div>
-    <div id="country" class="profile-txt">${content}</div>
+    <div class="profile-txt">${content}</div>
   </li>`)
 }
 

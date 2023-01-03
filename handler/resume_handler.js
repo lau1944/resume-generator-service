@@ -106,7 +106,8 @@ function bindProfile(profile, root) {
     avatar,
     email,
     country,
-    phoneNumber
+    phoneNumber,
+    city
   } = profile
   root.querySelector('#first-name').set_content(firstName)
   root.querySelector('#last-name').set_content(lastName)
@@ -121,6 +122,10 @@ function bindProfile(profile, root) {
 
   if (country) {
     details.appendChild(parseProfileItem('COUNTRY', country))
+  }
+
+  if (city) {
+    details.appendChild(parseProfileItem('CITY', city))
   }
 
   if (phoneNumber) {

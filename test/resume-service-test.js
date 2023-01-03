@@ -56,6 +56,7 @@ describe('RPC setup', () => {
         role: 'Software engineer',
         email: 'tt@gmail.com',
         country: 'China',
+        city: 'Foshan',
         avatar: 'https://miro.medium.com/max/720/1*v7eYkDuAVKSilUzhHQ4lLA.webp'
       },
       links: [

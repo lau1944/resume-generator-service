@@ -35,6 +35,7 @@ message Profile {
     string email = 5;
     optional string country = 6;
     optional string phoneNumber = 7;
+    optional string city = 8;
 }
 
 message Eduation {
