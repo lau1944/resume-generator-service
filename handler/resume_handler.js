@@ -81,13 +81,12 @@ function bindEducation(root, edus) {
   if (!edus || edus.length === 0) {
     return
   }
-
   const eduView = root.querySelector('#des-list')
   eduView.appendChild(parseEducationView())
 
   const eduList = root.querySelector('#school-list')
   for (const edu of edus) {
-    eduList.appendChild(parseEduItem(edu.name, edu.time, edu.location))
+    eduList.appendChild(parseEduItem({ name: edu.name, time: edu.time, location: edu.location, content: edu.content }))
   }
 }
 

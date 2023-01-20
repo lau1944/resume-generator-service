@@ -109,7 +109,8 @@ describe('RPC setup', () => {
         {
           name: 'Ming Chuan University',
           time: '2020 Sep 9 - 2023 Jun 1',
-          location: 'Taipei'
+          location: 'Taipei',
+          content: '. Developed mobile application, mainly focus on android software with Flutter and android framework. \n. Write Flutter and native android libraries and module with clean code and good architecture. \n. Main role on developing a social app about early childhood education for family.'
         },
         {
           name: 'New York University',
