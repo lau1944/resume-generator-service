@@ -86,7 +86,7 @@ function bindEducation(root, edus) {
 
   const eduList = root.querySelector('#school-list')
   for (const edu of edus) {
-    eduList.appendChild(parseEduItem({ name: edu.name, time: edu.time, location: edu.location, content: edu.content }))
+    eduList.appendChild(parseEduItem({ name: edu.name, time: edu.time, location: edu.location, content: edu.content, degree: edu.degree }))
   }
 }
 

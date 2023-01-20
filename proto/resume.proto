@@ -43,6 +43,7 @@ message Eduation {
     string time = 2;
     string location = 3;
     string content = 4;
+    string degree = 5;
 }
 
 message Work {
