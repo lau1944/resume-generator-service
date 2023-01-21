@@ -49,6 +49,8 @@
     #school-time {
       font-size: 13px;
       font-weight: 200;
+      display: flex;
+      flex-direction: row;
     }
 
     #school-text {
@@ -288,6 +290,10 @@
       font-weight: 500;
       font-size: 13px;
     }
+    
+    .indicator {
+      padding: 0px 10px 0 10px;
+    }
   </style>
   <link     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -464,7 +470,11 @@
         <h3 id="university">Ming Chuan University</h3>
         <div id="school-info">
           <div id="school-degree">Bachelor degree</div>
-          <div id="school-time">2020 Sep 9 - 2023 Jun 1</div>
+          <div id="school-time">
+            <div>2020 Sep 9</div>
+            <div class="indicator"> - </div>
+            <div>2023 Jun 1</div>
+          </div>
         </div>
         <div id="school-text">. Developed mobile application, mainly focus on android software with Flutter and android framework. 
 . Write Flutter and native android libraries and module with clean code and good architecture. 
@@ -480,7 +490,11 @@
         <h3 id="university">New York University</h3>
         <div id="school-info">
           <div id="school-degree">Master degree</div>
-          <div id="school-time">2020 Sep 9 - 2023 Jun 1</div>
+          <div id="school-time">
+            <div>2020 Sep 9</div>
+            <div class="indicator"> - </div>
+            <div>2023 Jun 1</div>
+          </div>
         </div>
         <div id="school-text"></div>
       </div>

@@ -84,14 +84,18 @@ const parseEducationView = () => {
   `)
 }
 
-const parseEduItem = ({ name, time, location, content, degree }) => {
+const parseEduItem = ({ name, startTime, endTime, location, content, degree }) => {
   return HTMLParser.parse(`
     <li class="school-item">
       <div>
         <h3 id="university">${name || ''}</h3>
         <div id="school-info">
           <div id="school-degree">${degree || ''}</div>
-          <div id="school-time">${time || ''}</div>
+          <div id="school-time">
+            <div>${startTime || ''}</div>
+            <div class="indicator"> - </div>
+            <div>${endTime || ''}</div>
+          </div>
         </div>
         <div id="school-text">${content || ''}</div>
       </div>

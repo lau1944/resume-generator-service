@@ -40,10 +40,11 @@ message Profile {
 
 message Eduation {
     string name = 1;
-    string time = 2;
-    string location = 3;
-    string content = 4;
-    string degree = 5;
+    string startTime = 2;
+    string endTime = 3;
+    string location = 4;
+    string content = 5;
+    string degree = 6;
 }
 
 message Work {
