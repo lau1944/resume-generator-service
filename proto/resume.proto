@@ -60,6 +60,8 @@ message Project {
     string title = 1;
     string link = 2;
     string content = 3;
+    string startTime = 4;
+    string endTime = 5;
 }
 
 message ResumeResponse {

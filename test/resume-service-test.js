@@ -136,12 +136,16 @@ describe('RPC setup', () => {
         {
           title: 'App hunt',
           link: 'https://blank.com',
-          content: 'sdsdaodqwojfaojfokpdsjkpfnsepkfnpkwenfpkwempfkneplfmnpfw'
+          content: 'sdsdaodqwojfaojfokpdsjkpfnsepkfnpkwenfpkwempfkneplfmnpfw',
+          startTime: '5 Jan',
+          endTime: '15 Nov'
         },
         {
           title: 'Techcrunch',
           link: 'https://blank.com',
-          content: 'sdsdaodqwojfaojfokpdsjkpfnsepkfnpkwenfpkwempfkneplfmnpfw'
+          content: 'sdsdaodqwojfaojfokpdsjkpfnsepkfnpkwenfpkwempfkneplfmnpfw',
+          startTime: '5 Jan',
+          endTime: '15 Nov'
         }
       ],
       introduction: 'Enthusiastic software engineer, love implementing computersoftware.Always eager to learn new technologies, a fast learner.Always has passion to find out how things work under the hood.With the mobile development background, want to explore new areaon backend development, looking forward to new challenges.An opensource contributor, has experience on contributing open sourceproject.',

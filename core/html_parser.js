@@ -23,16 +23,22 @@ const parseProjectView = () => {
   `)
 }
 
-const parseProjectItem = ({ title, link, content }) => {
+const parseProjectItem = ({ title, link, content, startTime, endTime }) => {
   return HTMLParser.parse(`
     <li id="project-item">
       <div class="header-layer">
         <div id="project-title">${title || ''}</div>
-        <a
-          id="project-link"
-          href="${link || ''}"
-          >Project link</a
-        >
+        <div class="project-extra">
+          <a
+            id="project-link"
+            href="${link || ''}"
+            >Project link</a>
+          <div class="horizon">
+            <div>${startTime || ''}</div>
+            <div class="indicator"> - </div>
+            <div>${endTime || ''}</div>
+          </div>
+        </div>
       </div>
 
       <div id="project-content">${content || ''}</div>
