@@ -53,6 +53,7 @@ message Work {
     string startTime = 3;
     string endTime = 4;
     string description = 5;
+    string role = 6;
 }
 
 message Project {

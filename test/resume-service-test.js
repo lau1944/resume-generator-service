@@ -125,6 +125,7 @@ describe('RPC setup', () => {
       works: [
         {
           name: 'Duo Yi network',
+          role: 'Mobile engineer',
           location: 'Guangzhou',
           startTime: '6 Jan',
           endTime: '8 Aug',
