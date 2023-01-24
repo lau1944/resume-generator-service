@@ -32,6 +32,8 @@ const parseProjectItem = ({ title, link, content, startTime, endTime }) => {
           <a
             id="project-link"
             href="${link || ''}"
+            target="_blank"
+            rel="noreferrer"
             >Project link</a>
           <div class="horizon">
             <div>${startTime || ''}</div>
