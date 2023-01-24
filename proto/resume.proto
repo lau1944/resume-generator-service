@@ -50,8 +50,9 @@ message Eduation {
 message Work {
     string name = 1;
     string location = 2;
-    string time = 3;
-    string description = 4;
+    string startTime = 3;
+    string endTime = 4;
+    string description = 5;
 }
 
 message Project {

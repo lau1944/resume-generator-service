@@ -126,7 +126,8 @@ describe('RPC setup', () => {
         {
           name: 'Duo Yi network',
           location: 'Guangzhou',
-          time: '2020 Sep - 2022 Jun',
+          startTime: '6 Jan',
+          endTime: '8 Aug',
           description: 'Do some jobs'
         }
       ],

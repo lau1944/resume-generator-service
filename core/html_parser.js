@@ -53,14 +53,18 @@ const parseWorkView = () => {
   `)
 }
 
-const parseWorkItem = ({ name, location, time, description }) => {
+const parseWorkItem = ({ name, location, startTime, endTime, description }) => {
   return HTMLParser.parse(`
     <li>
       <div class="title">
         <div id="company-name">${name || ''}</div>
         <div>
           <div id="company-location">${location || ''}</div>
-          <div id="company-time">${time || ''}</div>
+          <div id="company-time">
+            <div>${startTime || ''}</div>
+            <div class="indicator"> - </div>
+            <div>${endTime || ''}</div>
+          </div>
         </div>
       </div>
 
