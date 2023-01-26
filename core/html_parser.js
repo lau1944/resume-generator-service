@@ -121,8 +121,8 @@ const parseEduItem = ({ name, startTime, endTime, location, content, degree }) =
 const parseProfileItem = (type, content) => {
   return HTMLParser.parse(`
   <li class="profile-item">
-    <div>${type}</div>
-    <div class="profile-txt">${content}</div>
+    <div>${type || ''}</div>
+    <div class="profile-txt">${content || ''}</div>
   </li>`)
 }
 
@@ -135,6 +135,10 @@ const parseLinkView = () => {
 }
 
 const parseLinkItem = (type, link) => {
+  if (!type || !link) {
+    return
+  }
+
   return HTMLParser.parse(`
     <li class="profile-item">
       <a class="link-txt" href="${link}">${type}</a>
@@ -151,18 +155,24 @@ const parseSkillView = () => {
 }
 
 const parseSkillItem = (name, level) => {
-  if (level < 1 || level > 5) {
+  if (level && (level < 1 || level > 5)) {
     throw new Error('level should not smaller than 1 or larger than 5')
+  }
+
+  let levelView = ''
+  if (level) {
+    levelView = `
+    <div id="bar">
+      <div class="bar-container">
+        <div class="bar-${level}"></div>
+      </div>
+    </div>`
   }
 
   return HTMLParser.parse(`
       <li class="skill-item">
-      <div id="skill-name">${name}</div>
-      <div id="bar">
-        <div class="bar-container">
-          <div class="bar-${level}"></div>
-        </div>
-      </div>
+      <div id="skill-name">${name || ''}</div>
+      ${levelView}
     </li>
   `)
 }
@@ -176,18 +186,24 @@ const parseLangView = () => {
 }
 
 const parseLangItem = (name, level) => {
-  if (level < 1 || level > 5) {
+  if (level && (level < 1 || level > 5)) {
     throw new Error('level should not smaller than 1 or larger than 5')
+  }
+
+  let levelView = ''
+  if (level) {
+    levelView = `
+    <div id="bar">
+      <div class="bar-container">
+        <div class="bar-${level}"></div>
+      </div>
+    </div>`
   }
 
   return HTMLParser.parse(`
       <li class="lang-item">
       <div id="lang-name">${name}</div>
-      <div id="bar">
-        <div class="bar-container">
-          <div class="bar-${level}"></div>
-        </div>
-      </div>
+      ${levelView}
     </li>
   `)
 }

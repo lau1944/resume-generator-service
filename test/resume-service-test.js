@@ -87,8 +87,8 @@ describe('RPC setup', () => {
           level: 2
         },
         {
-          name: 'Javascript',
-          level: 5
+          name: 'MySql',
+          level: undefined
         }
       ],
       langs: [
