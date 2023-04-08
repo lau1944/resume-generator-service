@@ -45,6 +45,7 @@ message Eduation {
     string location = 4;
     string content = 5;
     string degree = 6;
+    string major = 7;
 }
 
 message Work {

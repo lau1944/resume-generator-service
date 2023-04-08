@@ -51,7 +51,7 @@ const parseWorkView = () => {
 
 const parseWorkItem = ({ name, role, location, startTime, endTime, description }) => {
   return HTMLParser.parse(`
-    <li>
+    <li id="work-item">
       <div class="title">
         <div id="company-name">${role || ''}, ${name || ''}</div>
         <div>
@@ -84,22 +84,22 @@ const parseEducationView = () => {
   `)
 }
 
-const parseEduItem = ({ name, startTime, endTime, location, content, degree }) => {
+const parseEduItem = ({ name, startTime, endTime, location, content, degree, major }) => {
   return HTMLParser.parse(`
     <li class="school-item">
       <div>
         <h3 id="university">${name || ''}</h3>
         <div id="school-info">
-          <div id="school-degree">${degree || ''}</div>
-          <div id="school-time">
-            <div>${startTime || ''}</div>
-            <div class="indicator"> - </div>
-            <div>${endTime || ''}</div>
-          </div>
+          <div id="school-degree">${degree || ''}, ${major || ''}</div>
         </div>
         <div id="school-text">${content || ''}</div>
       </div>
-      <div>
+      <div class="school-extra">
+        <div id="school-time">
+          <div>${startTime || ''}</div>
+          <div class="indicator"> - </div>
+          <div>${endTime || ''}</div>
+        </div>
         <div id="school-location">${location || ''}</div>
       </div>
     </li>

@@ -5,7 +5,7 @@ const { parseProfileItem, parseLinkView, parseLinkItem, parseSkillView, parseSki
  * @param {Resume} resume detail
  * @returns
  */
-function bind (root, data) {
+function bind(root, data) {
   // bind data into profile view
   bindProfile(data.profile, root)
 
@@ -33,7 +33,7 @@ function bind (root, data) {
   return root.toString()
 }
 
-function bindProject (root, projects) {
+function bindProject(root, projects) {
   if (!projects || projects.length === 0) {
     return
   }
@@ -48,7 +48,7 @@ function bindProject (root, projects) {
 }
 
 // bind work into view
-function bindWork (root, works) {
+function bindWork(root, works) {
   if (!works || works.length === 0) {
     return
   }
@@ -63,7 +63,7 @@ function bindWork (root, works) {
 }
 
 // bind education to view
-function bindEducation (root, edus) {
+function bindEducation(root, edus) {
   if (!edus || edus.length === 0) {
     return
   }
@@ -72,7 +72,7 @@ function bindEducation (root, edus) {
 
   const eduList = root.querySelector('#school-list')
   for (const edu of edus) {
-    eduList.appendChild(parseEduItem({ name: edu.name, startTime: edu.startTime, endTime: edu.endTime, location: edu.location, content: edu.content, degree: edu.degree }))
+    eduList.appendChild(parseEduItem({ name: edu.name, startTime: edu.startTime, endTime: edu.endTime, location: edu.location, content: edu.content, degree: edu.degree, major: edu.major }))
   }
 }
 
@@ -83,7 +83,7 @@ function bindIntro (root, intro) {
 }
 
 // bind user profile details to html
-function bindProfile (profile, root) {
+function bindProfile(profile, root) {
   const {
     firstName,
     lastName,
@@ -118,7 +118,7 @@ function bindProfile (profile, root) {
   }
 }
 
-function bindLinks (links, root) {
+function bindLinks(links, root) {
   if (!links || links.length === 0) {
     return
   }
@@ -133,7 +133,7 @@ function bindLinks (links, root) {
   }
 }
 
-function bindSkills (skills, root) {
+function bindSkills(skills, root) {
   if (!skills || skills.length === 0) {
     return
   }
@@ -148,7 +148,7 @@ function bindSkills (skills, root) {
   }
 }
 
-function bindLangs (langs, root) {
+function bindLangs(langs, root) {
   if (!langs || langs.length === 0) {
     return
   }

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
-  <meta name="viewport" content="700, initial-scale=1" >
   <style>
     body {
+      width: 900px;
       margin: 5vh;
     }
 
@@ -31,6 +31,10 @@
       flex-direction: row;
       justify-content: space-between;
       align-items: flex-start;
+    }
+
+    .school-text {
+      white-space: pre-line;
     }
 
     .school-item {
@@ -138,6 +142,7 @@
     .profile-txt {
       font-size: 14px;
       font-weight: 150;
+      white-space: pre-line;
     }
 
     .link-txt {
@@ -245,7 +250,7 @@
       font-size: 13px;
       font-weight: 200;
       font-family: poppins;
-      margin-top: 12px;
+      white-space: pre-line;
     }
 
     #language {
@@ -259,6 +264,10 @@
     }
 
     #project-item {
+      margin-top: 25px;
+    }
+
+    #work-item {
       margin-top: 25px;
     }
 
@@ -292,7 +301,7 @@
       font-weight: 500;
       font-size: 13px;
     }
-    
+
     .indicator {
       padding: 0px 10px 0 10px;
     }
@@ -308,25 +317,35 @@
       display: flex;
       flex-direction: column;
     }
+
+    #project-content {
+      white-space: pre-wrap;
+    }
+
+    .school-extra {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
   </style>
   <link     rel="stylesheet"
+    media="print"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
   >
-  <link href="classic-style.css" rel="stylesheet" type="text/css" >
   <header>
     <div class="header-layer">
       <div>
         
-        <h1 id="first-name">John</h1>
+        <h1 id="first-name">Ruiquan</h1>
         
-        <h1 id="last-name">Lennon</h1>
+        <h1 id="last-name">Liu</h1>
 
         
         <div id="role" class="role">Software engineer</div>
       </div>
 
       
-      <img id="avatar" src="https://miro.medium.com/max/720/1*v7eYkDuAVKSilUzhHQ4lLA.webp" alt="Avatar">
+      <img id="avatar" src="https://qlhawzpppotigunufwvu.supabase.co/storage/v1/object/public/avatars/resume/WechatIMG57.jpg" alt="Avatar">
     </div>
 
     <hr class="solid" >
@@ -343,15 +362,11 @@
             
   <li class="profile-item">
     <div>EMAIL</div>
-    <div class="profile-txt">tt@gmail.com</div>
+    <div class="profile-txt">lauchuen94@gmail.com</div>
   </li>
   <li class="profile-item">
     <div>COUNTRY</div>
     <div class="profile-txt">China</div>
-  </li>
-  <li class="profile-item">
-    <div>CITY</div>
-    <div class="profile-txt">Foshan</div>
   </li></ul>
         </div>
 
@@ -362,15 +377,11 @@
     <div class="title-divide"></div>
     <ul id="link-list">
     <li class="profile-item">
-      <a class="link-txt" href="http://blank.com">Github</a>
+      <a class="link-txt" href="https://github.com/lau1944">Github</a>
     </li>
   
     <li class="profile-item">
-      <a class="link-txt" href="http://blank.com">Linkedin</a>
-    </li>
-  
-    <li class="profile-item">
-      <a class="link-txt" href="http://blank.com">Personal site</a>
+      <a class="link-txt" href="https://www.linkedin.com/in/ruiquan-liu/">Linkedin</a>
     </li>
   </ul>
   </div>
@@ -384,35 +395,45 @@
       <li class="skill-item">
       <div id="skill-name">Java</div>
       
-    <div id="bar">
-      <div class="bar-container">
-        <div class="bar-5"></div>
-      </div>
-    </div>
     </li>
   
       <li class="skill-item">
       <div id="skill-name">Kotlin</div>
       
-    <div id="bar">
-      <div class="bar-container">
-        <div class="bar-4"></div>
-      </div>
-    </div>
     </li>
   
       <li class="skill-item">
-      <div id="skill-name">Golang</div>
+      <div id="skill-name">Dart</div>
       
-    <div id="bar">
-      <div class="bar-container">
-        <div class="bar-2"></div>
-      </div>
-    </div>
     </li>
   
       <li class="skill-item">
-      <div id="skill-name">MySql</div>
+      <div id="skill-name">Javascript</div>
+      
+    </li>
+  
+      <li class="skill-item">
+      <div id="skill-name">Mysql</div>
+      
+    </li>
+  
+      <li class="skill-item">
+      <div id="skill-name">MongoDB</div>
+      
+    </li>
+  
+      <li class="skill-item">
+      <div id="skill-name">Nodejs</div>
+      
+    </li>
+  
+      <li class="skill-item">
+      <div id="skill-name">Git</div>
+      
+    </li>
+  
+      <li class="skill-item">
+      <div id="skill-name">Unix</div>
       
     </li>
   </ul>
@@ -425,33 +446,13 @@
     <div class="title-divide"></div>
     <ul id="lang-list">
       <li class="lang-item">
-      <div id="lang-name">Chinese</div>
-      
-    <div id="bar">
-      <div class="bar-container">
-        <div class="bar-4"></div>
-      </div>
-    </div>
-    </li>
-  
-      <li class="lang-item">
       <div id="lang-name">English</div>
       
-    <div id="bar">
-      <div class="bar-container">
-        <div class="bar-5"></div>
-      </div>
-    </div>
     </li>
   
       <li class="lang-item">
-      <div id="lang-name">Spanish</div>
+      <div id="lang-name">Chinese</div>
       
-    <div id="bar">
-      <div class="bar-container">
-        <div class="bar-2"></div>
-      </div>
-    </div>
     </li>
   </ul>
   </div>
@@ -464,7 +465,10 @@
             <h2>Introduction</h2>
             <div class="title-divide"></div>
 
-            <div id="introduction" class="profile-txt">Enthusiastic software engineer, love implementing computersoftware.Always eager to learn new technologies, a fast learner.Always has passion to find out how things work under the hood.With the mobile development background, want to explore new areaon backend development, looking forward to new challenges.An opensource contributor, has experience on contributing open sourceproject.</div>
+            <div id="introduction" class="profile-txt">I am proficient in Java, Kotlin, Dart, understanding clean architecture and design pattern 
+  I am skilled in writing high quality code and implementing real world software. 
+ I have many personal projects which fully developed by myself, published both on google play and app store, couple of them reach millions of downloads. 
+ I am a quick problem-solver, easy communicater and a quick learner.</div>
           </div>
 
           <hr class="solid" >
@@ -483,20 +487,18 @@
       
     <li class="school-item">
       <div>
-        <h3 id="university">Ming Chuan University</h3>
+        <h3 id="university">Ming chuan university</h3>
         <div id="school-info">
-          <div id="school-degree">Bachelor degree</div>
-          <div id="school-time">
-            <div>2020 Sep 9</div>
-            <div class="indicator"> - </div>
-            <div>2023 Jun 1</div>
-          </div>
+          <div id="school-degree">Bachelor degree, Computer science</div>
         </div>
-        <div id="school-text">. Developed mobile application, mainly focus on android software with Flutter and android framework. 
-. Write Flutter and native android libraries and module with clean code and good architecture. 
-. Main role on developing a social app about early childhood education for family.</div>
+        <div id="school-text"></div>
       </div>
-      <div>
+      <div class="school-extra">
+        <div id="school-time">
+          <div>2016</div>
+          <div class="indicator"> - </div>
+          <div>2020</div>
+        </div>
         <div id="school-location">Taipei</div>
       </div>
     </li>
@@ -505,16 +507,16 @@
       <div>
         <h3 id="university">New York University</h3>
         <div id="school-info">
-          <div id="school-degree">Master degree</div>
-          <div id="school-time">
-            <div>2020 Sep 9</div>
-            <div class="indicator"> - </div>
-            <div>2023 Jun 1</div>
-          </div>
+          <div id="school-degree">Master degree, Computer engineering</div>
         </div>
         <div id="school-text"></div>
       </div>
-      <div>
+      <div class="school-extra">
+        <div id="school-time">
+          <div>2021 Sep 1</div>
+          <div class="indicator"> - </div>
+          <div>2023 Jun 1</div>
+        </div>
         <div id="school-location">New York</div>
       </div>
     </li>
@@ -527,21 +529,22 @@
     <div class="title-divide"></div>
 
     <ul id="work-list">
-    <li>
+    <li id="work-item">
       <div class="title">
-        <div id="company-name">Mobile engineer, Duo Yi network</div>
+        <div id="company-name">Software engineer, DuoYi network</div>
         <div>
           <div id="company-location">Guangzhou</div>
           <div id="company-time">
-            <div>6 Jan</div>
+            <div>2020 May</div>
             <div class="indicator"> - </div>
-            <div>8 Aug</div>
+            <div>2021 Jun</div>
           </div>
         </div>
       </div>
 
       <div id="work">
-        Do some jobs
+        • Maintaining company internal work android app similar to slack, building new features with flutter and android. 
+ • Build common android modules and flutter library, like in-app update, authentication, in-app message, modules are tested and integrated by multiple, hight traffic application developed by company.
       </div>
     </li>
   </ul>
@@ -559,39 +562,112 @@
         <div id="project-title">App hunt</div>
         <div class="project-extra">
           <a             id="project-link"
-            href="https://blank.com"
+            href="https://play.google.com/store/apps/details?id=com.vau.apphunt.studiotech"
             target="_blank"
             rel="noreferrer"
             >Project link</a>
           <div class="horizon">
-            <div>5 Jan</div>
+            <div>2018 Jun</div>
             <div class="indicator"> - </div>
-            <div>15 Nov</div>
+            <div>now</div>
           </div>
         </div>
       </div>
 
-      <div id="project-content">sdsdaodqwojfaojfokpdsjkpfnsepkfnpkwenfpkwempfkneplfmnpfw</div>
+      <div id="project-content">A google play application explore tool with an iOS style UI interface. tech stack - android, firebase, nodejs, google cloud.
+. Develop native android app for users to search apps and games, users can post their recommendation.
+ . Write REST API for accessing store data, post users content to database, push notifications.
+ . Deploy service as docker container to Google Cloud cloud run platform. CircleCI to automate building process and deployment.</div>
     </li>
   
     <li id="project-item">
       <div class="header-layer">
-        <div id="project-title">Techcrunch</div>
+        <div id="project-title">Season</div>
         <div class="project-extra">
           <a             id="project-link"
-            href="https://blank.com"
+            href="https://seasonnatural.netlify.app/"
             target="_blank"
             rel="noreferrer"
             >Project link</a>
           <div class="horizon">
-            <div>5 Jan</div>
+            <div>2020 Jun</div>
             <div class="indicator"> - </div>
-            <div>15 Nov</div>
+            <div>now</div>
           </div>
         </div>
       </div>
 
-      <div id="project-content">sdsdaodqwojfaojfokpdsjkpfnsepkfnpkwenfpkwempfkneplfmnpfw</div>
+      <div id="project-content">Listen to white noise, nature sound. Mood tracker.
+ . Develop Flutter application (cross platform), users can search collections of white noise, listen to the sound in background.
+ . Writing REST API on Express, queries white noise data from mongodb. 
+ tech stack: flutter, nodejs, mongodb, redis.</div>
+    </li>
+  
+    <li id="project-item">
+      <div class="header-layer">
+        <div id="project-title">Flow VPN</div>
+        <div class="project-extra">
+          <a             id="project-link"
+            href="https://flow-china-vpn.vercel.app/"
+            target="_blank"
+            rel="noreferrer"
+            >Project link</a>
+          <div class="horizon">
+            <div>2021 Aug</div>
+            <div class="indicator"> - </div>
+            <div>now</div>
+          </div>
+        </div>
+      </div>
+
+      <div id="project-content">VPN app for connecting Chinese social network from abroad 
+ . Develop front end on Flutter (Mobile app) and React (Landing page), use OpenVpn client for connecting to remote VPN server.
+ . Use Spring boot to interact with mysql server, redis, get user and server data from database, implement consistent hashing algorithm to handle load balance, design method to encrypt server info and send to client.
+ . Manage OpenVpn server on Linux CentOS, hosted on Alibaba cloud, writing SHELL to automate process to manage vpn users.
+ tech stack: flutter, springboot, nodejs, mongodb, mysql, rabbitmq, redis, openvpn.</div>
+    </li>
+  
+    <li id="project-item">
+      <div class="header-layer">
+        <div id="project-title">Bunrest</div>
+        <div class="project-extra">
+          <a             id="project-link"
+            href="https://github.com/lau1944/bunrest"
+            target="_blank"
+            rel="noreferrer"
+            >Project link</a>
+          <div class="horizon">
+            <div>2021 Aug</div>
+            <div class="indicator"> - </div>
+            <div>2021 Sep</div>
+          </div>
+        </div>
+      </div>
+
+      <div id="project-content">An ExpressJs like API for bun http server, written in typescript, test covered. Hundred of star on github</div>
+    </li>
+  
+    <li id="project-item">
+      <div class="header-layer">
+        <div id="project-title">AI chatbot</div>
+        <div class="project-extra">
+          <a             id="project-link"
+            href="https://open-at-chat.netlify.app/"
+            target="_blank"
+            rel="noreferrer"
+            >Project link</a>
+          <div class="horizon">
+            <div>2023 Feb</div>
+            <div class="indicator"> - </div>
+            <div>now</div>
+          </div>
+        </div>
+      </div>
+
+      <div id="project-content">A chat tool that integrates with ChatGPT and includes multiple embedded functions such as paper and essay generation, code generation, etc. The backend uses the official ChatGPT API and communicates with the client through the WebSocket protocol. 
+ The frontend is developed using Flutter and uses the bloc library to handle business logic and state control. When a user enters the application, they are granted an independent token which is used as a credential to identify the user in both HTTP requests and web socket. 
+The backend is built using Node.js, MongoDB, and Redis. An API gateway is set up in the front, which is mainly responsible for authentication and load balancing. When a user requests a connection, this service assigns server nodes based on the token type (paid or free user) using the consistent hashing algorithm. The generated token is stored in Redis, and users who have obtained a token are considered "logged in" and can include the token in the header of their subsequent requests. 
+ The ChatGPT server is used to call the ChatGPT API and listen for user connections through WebSocket. The prompt of ChatGPT context is adjusted according to different request parameters. This service also includes a rate limit that is marked in Redis to limit the frequency of requests. The server is packaged as a microservice Docker container and deployed on Google Cloud Run.</div>
     </li>
   </ul>
     </div>
