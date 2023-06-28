@@ -55,7 +55,7 @@ describe('RPC setup', () => {
         lastName: 'Liu',
         role: 'Software engineer',
         email: 'lauchuen94@gmail.com',
-        country: 'China',
+        city: 'New York',
         avatar: 'https://qlhawzpppotigunufwvu.supabase.co/storage/v1/object/public/avatars/resume/WechatIMG57.jpg'
       },
       links: [

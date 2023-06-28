@@ -83,7 +83,7 @@ function bindIntro (root, intro) {
 }
 
 // bind user profile details to html
-function bindProfile(profile, root) {
+function bindProfile (profile, root) {
   const {
     firstName,
     lastName,
@@ -97,9 +97,14 @@ function bindProfile(profile, root) {
   root.querySelector('#first-name').set_content(firstName)
   root.querySelector('#last-name').set_content(lastName)
   root.querySelector('#role').set_content(role)
+
+  const avatarHtml = root.querySelector('#avatar')
   if (avatar) {
-    root.querySelector('#avatar').setAttribute('src', avatar)
+    avatarHtml.setAttribute('src', avatar)
+  } else {
+    avatarHtml.remove()
   }
+
   const details = root.querySelector('#profile-list')
   if (email) {
     details.appendChild(parseProfileItem('EMAIL', email))
